@@ -1,0 +1,810 @@
+body
+{
+    background-color:black;
+}
+
+
+/* Navbar-styling */
+
+.navigation
+{
+    position: relative;
+    z-index: 2;
+    padding: 0 0.5rem;
+}
+.logo
+{
+    width: 3.5rem;
+    height: 3rem;
+    margin-left: -0.5rem;
+}
+.navigation .login
+{
+    margin-left: 1rem;
+    background-color:  rgb(139, 214, 72);
+    color: black;
+}
+.navigation .login:hover
+{
+    background-color: #67a53a;
+    cursor: pointer;
+}
+.navigation .home
+{
+    font-family: "Montserrat";
+    font-size: large;
+    margin-left: 1rem;
+    color: rgb(241, 245, 0);
+    text-decoration: none;
+}
+.navigation .home:hover
+{
+    color:rgb(175, 177, 0);
+    cursor: pointer;
+}
+.navigation .navbar-brand
+{
+    color: rgb(212, 199, 199);
+    font-family: "Montserrat";
+    font-size: large;
+    font-weight: bold;
+}
+.navigation .fa-discord
+{
+    color: #5865F2;
+}
+.fa-discord:hover
+{
+    color: #414aaa;
+    cursor: pointer;
+}
+.navigation .fa-reddit
+{
+    color: #FF4301;
+}   
+.fa-reddit:hover
+{
+    color: #9b2900;
+    cursor: pointer;
+}   
+.navigation .fa-telegram
+{
+    color: #0088CC;
+}
+.fa-telegram:hover
+{
+    color: #00517a;
+    cursor: pointer;
+}
+.navigation .fa-twitter
+{
+    color: #00acee ;
+}
+.fa-twitter:hover
+{
+    color: #00668e ;
+    cursor: pointer;
+}
+.navigation .social-icon
+{
+    margin: 0 28rem;
+}
+@media (max-width: 1010px) 
+{
+    .navigation .social-icon
+    {
+        display: none;
+    }
+    .navigation .login-page
+    {
+        margin: 0rem;
+    }
+}
+
+
+/* Spotlights styling */
+
+.spotlights
+{
+    position: absolute;
+    top: 0rem;
+}
+.spotlights .anime-name
+{
+    color: white;
+    line-height: 4rem;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 3rem;
+}
+.spotlights .animage
+{
+    width: 100%;
+    height: 45rem;
+    position: relative;
+    display: inline-block;
+}
+.spotlights .animage >img
+{
+    display: block;
+} 
+.spotlights .animage::after
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 210px 210px rgb(22, 19, 19);
+}
+.spotlights .carousel-caption
+{
+    text-align: left;
+    padding-right: 35rem;
+    margin :0 0 10rem -10rem;
+}
+.spotlights .detail
+{
+    background-color: rgb(72, 71, 71);
+    color: white;
+}
+.spotlights .detail:hover
+{
+    background-color: #313130;
+    cursor: pointer;
+}
+.spotlights .detail-icon
+{
+    font-family: "Montserrat";
+    color: white;
+    font-size: small;
+    line-height: 3rem;
+}
+.spotlights .detail-icon span
+{
+    padding-right: 1rem;
+}
+.spotlights .plot
+{
+    font-family: "Montserrat";
+    color: white;
+    font-weight: 100;
+}
+.spotlights .rank
+{
+    font-weight: 400;
+    font-size: large;
+    line-height: 2rem;
+    color: rgb(139, 214, 72);
+}
+.spotlights .watch
+{
+    position: relative;
+    color: black;
+    background-color:  rgb(139, 214, 72);;
+    z-index: 2;
+    margin-right: 0.5rem;
+}
+.spotlights .watch:hover
+{
+    background-color: #67a53a;
+}
+.spotlights .carousel-control-next-icon
+{
+    width: 8%;
+    height: 8%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    position: absolute;
+    right: 10%;
+}
+.spotlights .carousel-control-prev-icon
+{
+    width: 8%;
+    height: 8%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+    position: absolute;
+    left: 10%;
+}
+@media (max-width: 1010px) 
+{
+    .spotlights
+    {
+        position: relative;
+        height: fit-content;
+    }
+    .spotlights .carousel-caption
+    {
+        padding: 0 5rem 0 0;
+        margin-left: -2rem;
+        top :2rem;
+    }
+    .spotlights .anime-name
+    {
+        color: white;
+        line-height: 1rem;
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 1rem;
+    }
+    .spotlights .rank
+    {
+        font-weight: 400;
+        font-size: small;
+        line-height: 1rem;
+        color: rgb(139, 214, 72);
+    }
+    .spotlights .plot
+    {
+        font-family: "Montserrat";
+        color: white;
+        font-size: x-small;
+        font-weight: 100;
+    }
+     .spotlights .detail-icon span
+    {
+        font-size: xx-small;
+    } 
+    .spotlights .detail-icon
+    {
+        font-family: "Montserrat";
+        color: white;
+        font-size: small;
+        line-height: 1rem;
+    }
+    .spotlights .btn
+    {
+        font-size: xx-small;
+    }
+    .spotlights .detail
+    {
+        padding: 3px 9px;
+    }
+    .spotlights .watch
+    {
+        padding: 3px 9px;
+    }
+    .spotlights .animage
+    {
+        width: 100%;
+        height: 16rem;
+        position: relative;
+        display: block;
+
+    }
+    .spotlights .animage >img
+    {
+        display: block;
+    } 
+    .spotlights .animage::after
+    {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 80px 80px rgb(22, 19, 19);
+    }
+}
+
+
+/* Trending-styling*/
+
+.trending
+{
+    background-color: rgb(22, 19, 19);
+    position: relative;
+    margin-top: 41rem;
+    padding: 2rem 0 4rem 0;
+}
+.trending .trending-text
+{
+    font-family: "Montserrat";
+    font-size: x-large;
+    font-weight: 400;
+    color: rgb(139, 214, 72);
+    padding: 0 7rem 1rem;
+}
+.trending .card
+{
+    z-index: 2;
+    margin-right: 1rem  ;
+    padding: 0 0 0 2rem;
+    border: none;
+    background-image: linear-gradient(rgb(89, 88, 88), rgb(20, 20, 20));
+}
+.trending .anime-trend
+{
+    position: absolute;
+    color: white;
+    font-family: "Montserrat";
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    text-align: center;
+    left: 0.2rem;
+    bottom: 5rem;
+}
+.trending .anime-trend:hover
+{
+    color: rgb(139, 214, 72);
+    cursor:pointer;
+}
+.trending .trend-rank
+{
+    position: absolute;
+    color: rgb(139, 214, 72);
+    font-weight: 900;
+    font-family: "Montserrat";
+    left: 0.4rem;
+    bottom: 0rem;
+}
+.trending .trend-img
+{
+    height: 16rem;
+}
+.trending .carousel-control-prev-icon
+{
+    position: relative;
+    left: -7rem;
+    height: 8rem;
+    border-radius: 15%;
+    background-color:rgb(139, 214, 72);
+}
+.trending .carousel-control-next-icon
+{ 
+    position: relative;
+    right: -7rem;
+    height: 8rem;
+    border-radius: 15%;
+    background-color: rgb(139, 214, 72);
+}
+@media (max-width: 768px) {
+    .trending .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .trending .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+    .trending .carousel-control-prev-icon
+    {
+        left: 0rem;
+    }
+    .trending .carousel-control-next-icon
+    { 
+        right: 1rem;
+    }
+}
+
+.trending .carousel-inner .carousel-item.active,
+.trending .carousel-inner .carousel-item-start,
+.trending .carousel-inner .carousel-item-next,
+.trending .carousel-inner .carousel-item-prev {
+    display: flex;
+    /* // transition-duration: 10s; */
+}
+
+/* display 4 */
+@media (min-width: 768px) {
+    .trending .carousel-inner .carousel-item-right.active,
+    .trending .carousel-inner .carousel-item-next,
+    .trending .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(16.666%) !important;
+    }
+  
+    .trending .carousel-inner .carousel-item-left.active,
+    .trending .carousel-item-prev:not(.carousel-item-end),
+    .trending .active.carousel-item-start,
+    .trending .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-16.666%) !important;
+    }
+  
+    .trending .carousel-item-next.carousel-item-start, .trending .active.carousel-item-end {
+      transform: translateX(0) !important;
+    }
+  
+    .trending .carousel-inner .carousel-item-prev,
+    .trending .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(-16.666%) !important;
+    }
+}
+@media (max-width: 1010px)
+{
+    .trending .card
+    {
+        margin-left: 7rem;
+    }
+    .middle-container
+    {
+        position: relative;
+        bottom: 41rem;
+    }
+    .trending .trending-text
+    {
+        font-family: "Montserrat";
+        font-size: large;
+        font-weight: 400;
+        color: rgb(139, 214, 72);
+        padding: 0 1rem 0;
+    }
+    .trending
+    {
+        background-color: rgb(22, 19, 19);
+        position: relative;
+        margin-top: 41rem;
+        padding: 1rem 0 2rem 0;
+    }
+}
+
+
+/* Category-styling */
+
+.category
+{
+    position: relative;
+    top: 0rem;
+    padding: 1rem 0 1rem 0rem ;
+    background-color: rgb(29, 29, 36);
+}
+.category .list-group-item
+{
+    background-image: linear-gradient(rgb(39, 37, 37),rgb(70, 69, 69));
+    color: white;   
+    line-height: 3rem;
+}
+.category .card-header
+{
+    font-family: "Montserrat";
+    font-weight: bold;
+    color: rgb(107, 167, 55);
+    line-height: 2rem;
+}
+.category img
+{
+    width: 4em;
+    height: 5rem;
+}
+.category p
+{
+    position: absolute;
+    top: 1.5rem;
+    left: 6rem;
+    font-size: small;
+}
+.category h2
+{
+    font-family: "Montserrat";
+    font-size: medium;
+    position: absolute;
+    color: white;
+    top: 1rem;
+    left: 6rem;
+}
+.category h2:hover
+{
+    color: rgb(139, 214, 72);
+    cursor: pointer;
+}
+.category .row
+{
+    margin-right: 0;
+}
+.category .card
+{
+    background-image: linear-gradient(rgb(80, 77, 77),black);
+    margin: 1rem 0.8rem;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    padding-bottom: 0%;
+    width: 21.5rem;
+}
+@media (max-width: 1010px)
+{
+    .category .card
+    {   
+     width: 16rem;
+    }
+    .category .list-group-item
+    {
+        line-height: 6rem;
+    }
+}
+
+
+/* Top-upcoming-styling*/
+
+.top-upcoming
+{
+    position: relative;
+    top : 0rem;
+    padding: 2rem;
+    background-color: #262727;
+}
+#thirdTable table {
+    border: none;
+}
+#thirdTable td {
+    border: 2rem;
+    padding: 1.59rem 2rem 1.59rem 2rem;
+}
+.top-upcoming .card
+{
+    width: 20rem;
+    margin: 1rem ;
+    border: none;
+    background-image:linear-gradient(rgb(84, 85, 87),rgb(58, 58, 60) );
+
+}
+.top-upcoming .card-body
+{
+  padding: 0;
+}
+.top-upcoming .genres
+{
+    width: 27rem;
+}
+.top-upcoming img
+{
+    width: 100%;
+    height: 15rem;
+}
+.top-upcoming .text
+{
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: rgb(107, 167, 55);
+    margin-left: 1rem;
+}
+.top-upcoming .card-text p
+{  
+    text-align: left;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: small;
+    color: white;
+}
+.top-upcoming .card-text p:hover
+{  
+    color: rgb(107, 167, 55);
+    cursor: pointer;
+}
+.top-upcoming .card-text .date{
+    color: grey;
+}
+.top-upcoming .card-text .date:hover{
+    color: grey;
+}
+.top-img
+{
+    position: relative;
+} 
+.top-img >img
+{
+    display: block;
+}
+.top-img::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 70px 10px rgb(58, 58, 60);
+}
+
+
+/* Footer-styling*/
+
+footer
+{
+    background-color: #28282a;
+    position: relative;
+    top: 0rem;
+    text-align: center;
+    padding : 2rem 0;
+}
+footer .fa-discord
+{   
+    margin: 1rem;
+    color: #5865F2;
+}
+footer .fa-reddit
+{
+    margin: 1rem;
+    color: #FF4301;
+}   
+footer .fa-telegram
+{
+    margin: 1rem;
+    color: #0088CC;
+}
+footer .fa-twitter
+{
+    margin: 1rem;
+    color: #00acee ;
+}
+footer h1
+{
+    font-family: "Montserrat";
+    font-size: large;
+    color: grey;
+    padding-top: 2rem;
+}
+  
+@media (max-width: 1010px)
+{   footer
+    {
+        top: -41rem;
+    }
+}
+
+.login-page
+{
+    font-family: "Montserrat";
+}
+.login-page .img-fluid
+{
+    height: 41rem;
+}
+.login-page .brand
+{
+    font-family: "Montserrat";
+    font-size: xx-large;
+    font-weight: 700;
+    color:  rgb(139, 214, 72);
+}
+.login-page .form-label
+{
+    padding-top: 0.5rem;
+    color: white;
+}
+.login-page .btn
+{
+    font-size: large;
+    background-color:  rgb(139, 214, 72);
+    margin: 0 0.5rem;
+}
+.login-page .btn:hover
+{
+    background-color: #67a53a;
+    cursor: pointer;
+}
+.login-page .sign-in
+{
+    color: white;
+    font-weight: 400;
+}
+.login-page .sign-in .google
+{
+    background-color: rgb(161, 161, 161);
+}
+.login-page .sign-in .google:hover
+{
+    background-color: rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.register-page
+{
+    font-family: "Montserrat";
+}
+.register-page span
+{
+    color:  rgb(139, 214, 72);
+    font-size: xx-large;
+}
+.register-page .btn
+{
+    color: black;
+    font-size: large;
+    background-color:  rgb(139, 214, 72);
+}
+.register-page .btn:hover
+{
+    background-color: #67a53a;
+}
+.register-page .logo
+{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+.register-page .form-label
+{
+    padding-top: 0.5rem;
+    color: white;
+}
+.register-page .img-fluid
+{
+    height: 35rem;
+}
+@media(max-width: 1010px)
+{
+    .register-page .img-fluid
+    {
+        height: 30rem;
+    }
+}
+.register-page .flex-row i
+{
+    padding-bottom: 2.2rem;
+}
+.register-page .form-check-label
+{
+    color: white;
+}
+.register-page .sign-up .btn
+{
+    font-size: small;
+    margin: 0 0.5rem;
+}
+.register-page .sign-up span
+{
+    color: white;
+    font-size: medium;
+}
+.register-page .sign-up .google
+{
+    background-color: rgb(161, 161, 161);
+}
+.register-page .sign-up .google:hover
+{
+    background-color: rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+
+.modal-content
+{
+    font-family: "Montserrat";
+    background-color: rgb(26, 25, 25);
+    box-shadow: 0px 0px 20px rgba(153, 154, 153, 0.6);
+}
+.modal-content .close
+{
+    border: none;
+    background-color: rgb(26, 25, 25);
+    position: relative;
+    top : -1rem;
+    right: -0.6rem;
+    color: white;
+}   
+.modal-title
+{
+    color: rgb(139, 214, 72);
+    font-weight: 900;
+    font-size: x-large;
+}
+.modal-body h5
+{
+    color: rgb(255, 214, 214);
+    font-size: medium;
+    line-height: 1.5rem;
+}
+.modal-body span
+{
+    color: #a81d1d;
+    font-size: small;
+    font-weight: bold;
+}
+.modal-body p
+{
+    color: rgb(139, 214, 72);
+    font-size: small;
+    margin-bottom: 0;
+}
+.modal .myList
+{
+    font-size: small;
+    color: white;
+    background-color: #525352;
+}
+.modal .myList:hover
+{
+    background-color: #393939;
+}
+.modal .watch
+{
+    font-size: small;
+}

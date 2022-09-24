@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Anifinity</title>
+
+
+  <!--google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!--css stylesheets-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <!--bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+  <!-- Top-container -->
+  
+  <section class="top-container">
+
+    <!-- Navigation -->
+
+    <div class="navigation">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">Anifinity</a>
+        <img class="logo" src="\image\Anifinity-1 (1).png" alt="logo">
+        <%if(!logstat){%>
+        <button type="button" onclick="location.href='/login'" class="btn btn-success login"><%=logValue%></button>
+        <%}else{%>
+        <button type="button" onclick="location.href='/logout'" class="btn btn-success login"><%=logValue%></button>
+        <%}%>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <ul class="social-icon navbar-nav me-auto mb-2 mb-lg-0 mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.reddit.com/r/anime/" target="_blank"><i class="fa-brands fa-reddit"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://discord.gg/otaku" target="_blank"><i class="fa-brands fa-discord"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://t.me/Anime_x_Clan" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/Anime" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 d-flex input-group w-auto">
+          <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search Anime..." aria-label="Search">
+          <button class="btn btn-outline-success my-sm-0" type="submit"><i class="fa-brands fa-searchengin"></i></button>
+        </form>
+        <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-auto">
+            
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+          <!-- </ul> -->          
+        <!-- </div> -->
+      </nav>
+    </div>
+    
+    <!-- Spotlights -->
+
+    <div class="spotlights">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\2026106.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-caption">
+                <h3 class="rank">#1 Spotlight</h3>
+                <h1 class="anime-name">Death Note</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 24m</span>
+                  <span><i class="fa-solid fa-calendar"></i> Oct 3,2006</span>
+                </div>
+                <p class="plot">An intelligent high school student goes on a secret crusade to eliminate criminals from the world after discovering a notebook capable of killing anyone whose name is written into it.</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=NlJZ-YgAt-c'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter1"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Death Note</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Death Note is a Japanese manga series written by Tsugumi Ohba and illustrated by Takeshi Obata. The story follows Light Yagami, a teen genius who discovers a mysterious notebook: the 'Death Note', which belonged to the shinigami Ryuk, and grants the user the supernatural ability to kill anyone whose name is written in its pages. The series centers around Light's subsequent attempts to use the Death Note to carry out a worldwide massacre of individuals whom he deems immoral and to create a crime-free society, using the alias of a god-like vigilante named 'Kira', and the subsequent efforts of an elite Japanese police task force, led by enigmatic detective L, to apprehend him. Death Note ran in Shueisha's manga magazine Weekly Shōnen Jump from December 2003 to May 2006. Its 108 chapters were collected in 12 tankōbon volumes.</h5>
+                        <p><span>Japanese : </span>デスノート, Desu Nōto</p> 
+                        <p><span>Aired : </span>October 4, 2006 to June 27, 2007</p> 
+                        <p><span>Premiered : </span>Summer 2006</p> 
+                        <p><span>Status : </span>Finished</p> 
+                        <p><span>Imdb : </span>9.0 / 10</p> 
+                        <p><span>Genres : </span>Horror, Drama, Mystery, Thriller, Suspense, Crime</p> 
+                        <p><span> Produced by : </span>Toshio Nakatani, Manabu Tamura, Masao Maruyama</p> 
+                        <p><span>Studio : </span>Madhouse</p> 
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\108250.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-caption ">
+                <h3 class="rank">#2 Spotlight</h3>
+                <h1 class="anime-name">Attack On Titan</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 20m</span>
+                  <span><i class="fa-solid fa-calendar"></i> Jan 13,2018</span>
+                </div>
+                <p class="plot">Attack on Titan is a Japanese dark fantasy and post-apocalyptic anime TV series adapted from the manga of the same name by Hajime Isayama. It is set in a world where humanity lives inside cities surrounded by enormous walls due to the Titans, gigantic humanoid beings who devour humans seemingly without reason.</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=bT9csxkth8g'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter2"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Attack On Titan</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Attack on Titan is a Japanese dark fantasy anime television series, adapted from the manga of the same name by Hajime Isayama, that premiered on April 7, 2013. It has aired on NHK General TV in Japan,[e] and Aniplus Asia in various Asia-Pacific countries.In the United States and Canada, the series has streamed on Crunchyroll, Funimation, Netflix, Amazon Prime Video, and Hulu, in addition to airing on Adult Swim's Toonami programming block in the U.S.</h5>
+                        <p><span>Japanese : </span>進撃の巨人, Shingeki no Kyojin</p> 
+                        <p><span>Aired : </span>Jan 13, 2018 to present</p> 
+                        <p><span>Premiered : </span>Winter 2018</p> 
+                        <p><span>Status : </span>Currently Airing</p> 
+                        <p><span>Imdb : </span>9.0 / 10</p> 
+                        <p><span>Genres : </span>Action, Dark-fantasy, Post-apocalyptic</p> 
+                        <p><span> Produced by : </span>Tetsuya Kinoshita, Kensuke Tateishi, Toshihiro Maeda</p> 
+                        <p><span>Studio : </span>Wit Studio (1–59), MAPPA (60–)</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\1000030.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-caption">
+                <h3 class="rank">#3 Spotlight</h3>
+                <h1 class="anime-name">Demon Slayer</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 20m</span>
+                  <span><i class="fa-solid fa-calendar"></i> Apr 6,2019</span>
+                </div>
+                <p class="plot">Demon Slayer is a Japanese manga series written and illustrated by Koyoharu Gotouge. It follows teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger sister, Nezuko, turned into a demon.</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=a9tq0aS5Zu8'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter3"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Demon Slayer</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Demon Slayer , "Blade of Demon Destruction" is a Japanese manga series written and illustrated by Koyoharu Gotouge. It follows teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger sister, Nezuko, turned into a demon. It was serialized in Shueishas shōnen manga magazine Weekly Shōnen Jump from February 2016 to May 2020, with its chapters collected in twenty-three tankōbon volumes. It has been published in English by Viz Media and simultaneously published by Shueisha on their Manga Plus platform.</h5>
+                        <p><span>Japanese : </span>鬼滅の刃, Kimetsu no Yaiba</p> 
+                        <p><span>Aired : </span>April 6, 2019 to present</p> 
+                        <p><span>Premiered : </span>Summer 2019</p> 
+                        <p><span>Status : </span>Currently Airing</p> 
+                        <p><span>Imdb : </span>9.0 / 10</p> 
+                        <p><span>Genres : </span>Adventure, Dark fantasy, Martial arts</p> 
+                        <p><span> Produced by : </span>Akifumi, Fujio Masanori Miyake, Yūma Takahashi, Hikaru Kondo (1–26), Takashi Takano (34–44)</p> 
+                        <p><span>Studio : </span>Ufotable</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\713076.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-caption">
+                <h3 class="rank">#4 Spotlight</h3>
+                <h1 class="anime-name">My Hero Academia</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 24m</span>
+                  <span><i class="fa-solid fa-calendar"></i> Oct 12,2019</span>
+                </div>
+                <p class="plot">After he saves a bully from a Villain, a normal student is granted a superpower that allows him to attend a high school training academy for Heroes.</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=mezyq2OX6TM'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter4"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">My Hero Academia</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>My Hero Academia is a Japanese superhero manga series written and illustrated by Kōhei Horikoshi. It has been serialized in Shueisha's Weekly Shōnen Jump since July 2014, with its chapters additionally collected into 35 tankōbon volumes as of July 2022. Set in a world where superpowers (called 'Quirks') have become commonplace, the story follows Izuku Midoriya, a boy who was born without a Quirk but still dreams of becoming a superhero himself. He is scouted by All Might, Japan's greatest hero, who bestows his Quirk to Midoriya after recognizing his potential, and helps to enroll him in a prestigious high school for superheroes in training.</h5>
+                        <p><span>Japanese : </span>僕のヒーローアカデミア, Boku no Hīrō Akademia</p> 
+                        <p><span>Aired : </span>October 12, 2019 to present</p> 
+                        <p><span>Premiered : </span>Autumn 2019</p> 
+                        <p><span>Status : </span>Currently Airing</p> 
+                        <p><span>Imdb : </span>8.4 / 10</p> 
+                        <p><span>Genres : </span>Adventure, Science, fantasy, Superhero</p> 
+                        <p><span> Produced by : </span>Kazumasa Sanjōba, Hiroshi Kamei, Naoki Amano</p> 
+                        <p><span>Studio : </span>Bones</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\wp1809904-one-punch-man-wallpapers.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-caption">
+                <h3 class="rank">#5 Spotlight</h3>
+                <h1 class="anime-name">One Punch Man</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 24m</span>
+                  <span><i class="fa-solid fa-calendar"></i> Oct 4,2015</span>
+                </div>
+                <p class="plot">One-Punch Man is a Japanese superhero manga series created by One. It tells the story of Saitama, a superhero who, because he can defeat any opponent with a single punch, grows bored from a lack of challenge.</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=78ngg0SRlEI'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter5"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">One Punch Man</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>One-Punch Man is a Japanese superhero manga series created by One. It tells the story of Saitama, a superhero who, because he can defeat any opponent with a single punch, grows bored from a lack of challenge. One wrote the original webcomic manga version in early 2009. A digital manga remake began publication on Shueisha's Tonari no Young Jump website in June 2012. Written by One and illustrated by Yusuke Murata, its chapters are periodically compiled and published into individual tankōbon volumes. As of June 2022, 26 volumes have been released. In North America, Viz Media has licensed the remake manga for English language release and has serialized it in its Weekly Shonen Jump digital magazine.</h5>
+                        <p><span>Japanese : </span>ワンパンマン, Wanpanman</p> 
+                        <p><span>Aired : </span>October 5, 2015 to present</p> 
+                        <p><span>Premiered : </span>Autumn 2015</p> 
+                        <p><span>Status : </span>Currently Airing</p> 
+                        <p><span>Imdb : </span>8.4 / 10</p> 
+                        <p><span>Genres : </span>Action, Comedy, Superhero</p> 
+                        <p><span> Produced by : </span>Chinatsu Matsui, Nobuyuki Hosoya, Keita Kodama (season 1), Ayuri Taguchi (season 1),     Sōta Satō (season 2)</p> 
+                        <p><span>Studio : </span>Madhouse (season 1), J.C.Staff (season 2)</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\1116284.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-caption">
+                <h3 class="rank">#6 Spotlight</h3>
+                <h1 class="anime-name">Jujutsu Kaisen</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 22m</span>
+                  <span><i class="fa-solid fa-calendar"></i> Oct 3,2020</span>
+                </div>
+                <p class="plot">A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=f7R6NA4Yo00'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter6"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Jujutsu Kaisen</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Jujutsu Kaisen is a Japanese manga series written and illustrated by Gege Akutami. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since March 2018, with its chapters collected and published in 20 tankōbon volumes as of August 2022. The story follows high school student Yuji Itadori as he joins a secret organization of Jujutsu Sorcerers in order to kill a powerful Curse named Ryomen Sukuna, of whom Yuji becomes the host. Jujutsu Kaisen is a sequel to Akutami's Tokyo Metropolitan Curse Technical School, serialized in Shueisha's Jump GIGA from April to July 2017, later collected in a tankōbon volume, retroactively titled as Jujutsu Kaisen 0, in December 2018.</h5>
+                        <p><span>Japanese : </span>呪術廻戦, Jujutsu Kaisen</p> 
+                        <p><span>Aired : </span>October 3, 2020 to present</p> 
+                        <p><span>Premiered : </span>Autumn 2020</p> 
+                        <p><span>Status : </span>Currently Airing</p> 
+                        <p><span>Imdb : </span>8.6 / 10</p> 
+                        <p><span>Genres : </span>Adventure, Dark, fantasy, Supernatural</p> 
+                        <p><span> Produced by : </span>Hiroaki Matsutani, Makoto Kimura, Toshihiro Maeda, Yoshiaki Takagaki, Yuriha Murai</p> 
+                        <p><span>Studio : </span>MAPPA</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\1231318.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-caption">
+                <h3 class="rank">#7 Spotlight</h3>
+                <h1 class="anime-name">Spy x Family</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 23m</span>
+                  <span><i class="fa-solid fa-calendar"></i> Apr 3,2022</span>
+                </div>
+                <p class="plot">An elegant and hilarious action-comedy series, SPY x FAMILY tells the story of a suave superspy who must cobble together a fake family in order to get close to a target, not realising the fake wife and daughter he's enlisted are an assassin and a telepath.</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=ofXigq9aIpo'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter7"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter7" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Spy x Family</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Spy × Family (stylized as SPY×FAMILY; pronounced 'Spy Family') is a Japanese manga series written and illustrated by Tatsuya Endo. The story follows a spy who has to 'build a family' to execute a mission, not realizing that the girl he adopts as his daughter is a telepath, and the woman he agrees to be in a marriage with is a skilled assassin. The series has been serialized biweekly on Shueisha's Shōnen Jump+ application and website since March 2019, with the chapters collected in nine tankōbon volumes as of April 2022. It was licensed in North America by Viz Media.</h5>
+                        <p><span>Japanese : </span>家族の肖像, SPY×FAMILY</p> 
+                        <p><span>Aired : </span>April 9, 2022 to present</p> 
+                        <p><span>Premiered : </span>Summer 2022</p> 
+                        <p><span>Status : </span>Finished</p> 
+                        <p><span>Imdb : </span>8.6 / 10</p> 
+                        <p><span>Genres : </span>Action, Comedy, Spy</p> 
+                        <p><span> Produced by : </span>Kazuhiro Furuhashi, Kazuhiro Furuhashi, Makoto Miyazaki, Shūhei Mutsuki</p> 
+                        <p><span>Studio : </span>Wit Studio, CloverWorks </p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="carousel-item" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\wallpaperflare.com_wallpaper (1).jpg"class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-caption">
+                <h3 class="rank">#8 Spotlight</h3>
+                <h1 class="anime-name">Mob Psycho 100</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 22m</span>
+                  <span><i class="fa-solid fa-calendar"></i> July 12,2016</span>
+                </div>
+                <p class="plot">Mob, a school boy with psychic powers, attempts to juggle school life and his job as an exorcist. However, Mob's emotions become more and more unstable as opposing groups of spirits, psychics and con-artists try to trick him.</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=nTze7vAdRpM'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter8"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter8" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Mob Psycho 100</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Mob Psycho 100 is a Japanese manga series written and illustrated by One. It was serialized on Shogakukan's Ura Sunday website from April 2012 to December 2017. It has been also available online on Shogakukan's mobile app MangaONE since December 2014. Shogakukan compiled its chapters into sixteen tankōbon volumes.</h5>
+                        <p><span>Japanese : </span>モブサイコ100, Mobu Saiko Hyaku</p> 
+                        <p><span>Aired : </span>July 12,2016 to present</p> 
+                        <p><span>Premiered : </span>Summer 2016</p> 
+                        <p><span>Status : </span>Currently Airing</p> 
+                        <p><span>Imdb : </span>8.6 / 10</p> 
+                        <p><span>Genres : </span>Action, Comedy, Supernatural</p> 
+                        <p><span> Produced by : </span>Akio Matsuda, Hirotsugu Ogisu, Yūki Nagano</p> 
+                        <p><span>Studio : </span>Bones</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\840936.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-caption">
+                <h3 class="rank">#9 Spotlight</h3>
+                <h1 class="anime-name">Death Parade</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 24m</span>
+                  <span><i class="fa-solid fa-calendar"></i> Jan 9,2015</span>
+                </div>
+                <p class="plot">After death, humans go to either heaven or hell. But for some, at the instant of their death, they arrive at the Quindecim, a bar attended by the mysterious white-haired Decim</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=JSLWt-TMvE8'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter9"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter9" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Death Parade</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Death Parade is a Japanese anime television series created, written, and directed by Yuzuru Tachikawa and produced by Madhouse. The series spawned from a short film, Death Billiards, which was originally produced by Madhouse for the Young Animator Training Project's Anime Mirai 2013 and released in March 2013. The television series aired in Japan between January and March 2015. It is licensed in North America by Funimation and in the United Kingdom by Anime Limited, the latter of which was eventually cancelled. The series was obtained by Madman Entertainment for digital distribution in Australia and New Zealand.</h5>
+                        <p><span>Japanese : </span>デス・パレード, Desu Parēdo</p> 
+                        <p><span>Aired : </span>January 9, 2015 to present</p> 
+                        <p><span>Premiered : </span>Winter 2015</p> 
+                        <p><span>Status : </span>Currently Airing</p> 
+                        <p><span>Imdb : </span>7.9 / 10</p> 
+                        <p><span>Genres : </span>Psychological, Thriller</p> 
+                        <p><span> Produced by : </span>Toshio Nakatani, Kojiro Naotsuka, Hiroyuki Inage, Shunsuke Nara, Ayuri Taguchi</p> 
+                        <p><span>Studio : </span>Madhouse</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="300000">
+              <div class="animage">
+                <img src="\image\598628.jpg" class="d-block w-100"alt="...">
+              </div>
+              <div class="carousel-caption">
+                <h3 class="rank">#10 Spotlight</h3>
+                <h1 class="anime-name">Assassination Classroom</h1>
+                <div class="detail-icon">
+                  <span><i class="fa-solid fa-circle-play"></i> TV</span>
+                  <span><i class="fa-solid fa-clock"></i> 21m</span>
+                  <span><i class="fa-solid fa-calendar"></i> Jan 9,2015</span>
+                </div>
+                <p class="plot">Forget about homework and pop quizzes. The students of Class 3E have a far more important assignment: kill their teacher before the end of the year.</p>
+                <%if(logstat){%>
+                  <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='https://www.youtube.com/watch?v=kgNkGohA20k'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                  <button type="button" class="btn btn-success login rounded-pill detail" data-toggle="modal" data-target="#exampleModalCenter10"> Detail › </button>
+                  <%}else{%>
+                    <button type="button" class="btn btn-success login rounded-pill watch" onclick="location.href='/login'"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                    <button type="button" class="btn btn-success login rounded-pill detail" onclick="location.href='/login'"> Detail › </button>
+                  <%}%>
+                <!-- Modal -->
+                <div class="modal fade modal-lg" id="exampleModalCenter10" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Assassination Classroom</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h5>Assassination Classroom is a Japanese science fiction comedy manga series written and illustrated by Yusei Matsui. The series follows the daily life of an extremely powerful octopus-like being working as a junior high homeroom teacher, and his students dedicated to the task of assassinating him to prevent Earth from being destroyed. The students are considered 'misfits' in their school and are taught in a separate building; the class he teaches is called 3-E. It was serialized in Shueisha's Weekly Shōnen Jump magazine from July 2012 to March 2016, with its chapters collected in twenty-one tankōbon volumes</h5>
+                        <p><span>Japanese : </span>暗殺教室, Ansatsu Kyōshitsu</p> 
+                        <p><span>Aired : </span>January 9, 2015 to June 15, 2015</p> 
+                        <p><span>Premiered : </span>Winter 2015</p> 
+                        <p><span>Status : </span>Finished</p> 
+                        <p><span>Imdb : </span>8 / 10</p> 
+                        <p><span>Genres : </span>Action, Science fiction, Comedy</p> 
+                        <p><span> Produced by : </span>Noriko Ozaki</p> 
+                        <p><span>Studio : </span>Lerche</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success login rounded-pill watch"><i class="fa-solid fa-circle-play"></i> Preview</button>
+                        <button type="button" class="btn btn-success rounded-pill myList">+ Add to my List</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+          </div>
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+  </section>
+
+  <section class="middle-container">
+
+    <div class="trending">
+      <h1 class="trending-text">Trending</h1>
+      <div id="myCarousel" class="carousel slide container" data-bs-ride="carousel">
+        <div class="carousel-inner w-100">
+          <div class="carousel-item active">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\3795845.jpg">
+                <span class="anime-trend" onclick="location.href='https://en.wikipedia.org/wiki/Spy_%C3%97_Family'">Spy x Family</span>
+                <span class="trend-rank">01</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\1580451.jpg">
+                <span class="anime-trend">Kaguya-Sama...</span>
+                <span class="trend-rank">02</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\Shenmue.-the.Animation-.600.3595607.jpg">
+                <span class="anime-trend">Shenmue...</span>
+                <span class="trend-rank">03</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\Salaryman_s_Club_TV_Series-136170525-large.jpg">
+                <span class="anime-trend">Salaryman's Club</span>
+                <span class="trend-rank">04</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\My-Dress-Up-Darling-Wallpaper.jpg">
+                <span class="anime-trend">My Dress-up Dar...</span>
+                <span class="trend-rank">05</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\AOT_Season_2_Keyart.webp">
+                <span class="anime-trend">Attack On Titan S2</span>
+                <span class="trend-rank">06</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\Shaman.King.(2021).full.3407223.jpg">
+                <span class="anime-trend">Shaman King</span>
+                <span class="trend-rank">07</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\Dance.Dance.Danseur.600.3648399.jpg">
+                <span class="anime-trend">Dance Dance...</span>
+                <span class="trend-rank">08</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\Koroshi.Ai.600.3501216.jpg">
+                <span class="anime-trend">Love of Kill</span>
+                <span class="trend-rank">09</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="col-md-2">
+              <div class="card card-body">
+                <img class="trend-img img-fluid" src="\image\7151524.jpg">
+                <span class="anime-trend">Demon Slayer S3</span>
+                <span class="trend-rank">10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next " type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="category">
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card"">
+          <div class="card-header">
+            Top Airing
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <img src="\image\Kingdom_S4_KV.jpg" alt="">
+              <h2>Kingdom 4th Season</h2>
+              <p>TV • Ep 18 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\cfb473a0157437e02bd732ef8f40ae8a.jpg" alt="">
+              <h2>Made in Abyss</h2>
+              <p>TV • Ep 13 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download.jpg" alt="">
+              <h2>One Piece</h2>
+              <p>TV • Ep 1028 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (1).jpg" alt="">
+              <h2>Summertime Rendering</h2>
+              <p>TV • Ep 25 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (2).jpg" alt="">
+              <h2>Overlord IV</h2>
+              <p>TV • Ep 6 • 23m</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card">
+          <div class="card-header">
+            Most Popular
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <img src="\image\download (3).jpg" alt="">
+              <h2>Death Note</h2>
+              <p>TV • Ep 37 • 23m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (4).jpg" alt="">
+              <h2>Fullmetal Alchemist: BH</h2>
+              <p>TV • Ep 64 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (5).jpg" alt="">
+              <h2>Attack On Titan</h2>
+              <p>TV • Ep 86 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (6).jpg" alt="">
+              <h2 onclick="location.href='https://en.wikipedia.org/wiki/One-Punch_Man'">One Punch Man</h2>
+              <p>TV • Ep 24• 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (7).jpg" alt="">
+              <h2>Tokyo Ghoul</h2>
+              <p>TV • Ep 48 • 24m</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card">
+          <div class="card-header">
+            Most Favourite
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <img src="\image\download (8).jpg" alt="">
+              <h2>Bleach</h2>
+              <p>TV • Ep 366 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (9).jpg" alt="">
+              <h2>Hunter x Hunter</h2>
+              <p>TV • Ep 148 • 23m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (10).jpg" alt="">
+              <h2>Naruto</h2>
+              <p>TV • Ep 220 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (11).jpg" alt="">
+              <h2>Pokemon</h2>
+              <p>TV • Ep 1115 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (17).jpg" alt="">
+              <h2>Doraemon</h2>
+              <p>TV • Ep 1787 • 24m</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card">
+          <div class="card-header">
+            Most Viewed
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <img src="\image\download (12).jpg" alt="">
+              <h2>Fullmetal Alchemist</h2>
+              <p>TV • Ep 51 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (13).jpg" alt="">
+              <h2>Death Note</h2>
+              <p>TV • Ep 37 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (14).jpg" alt="">
+              <h2>Cowboy Bepop</h2>
+              <p>TV • Ep 26 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (15).jpg" alt="">
+              <h2>Neon Genesis Evangelion</h2>
+              <p>TV • Ep 26 • 24m</p>
+            </li>
+            <li class="list-group-item">
+              <img src="\image\download (16).jpg" alt="">
+              <h2>Bleach</h2>
+              <p>TV • Ep 366 • 24m</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="top-upcoming">
+    <div class="row">
+      <div class="col-lg-8">
+        <h4 class="text">Top-Upcoming </h4>  
+    <div class="card-group">
+      <div class="card">
+        <div class="card-body">
+          <div class="top-img">
+            <img src="\image\3981656.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <p onclick="location.href='https://en.wikipedia.org/wiki/Chainsaw_Man'">Chainsaw man</p>
+            <p class="date">Oct 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="top-img">
+            <img src="\image\1338462.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <p>Mob Psycho S3</p>
+            <p class="date">Oct 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="top-img">
+            <img src="\image\930762.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <p>My Hero Academia S3</p>
+            <p class="date">Oct 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body ">
+          <div class="top-img">
+            <img src="\image\3795864.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <p>Spy x Family Pt.2</p>
+            <p class="date">Oct 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="top-img">
+            <img src="\image\peakpx.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <p>Attack On Titan S4</p>
+            <p class="date">2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card">
+        <div class="card-body">
+          <div class="top-img">
+            <img src="\image\wp5214085-vinland-saga-phone-wallpapers.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <p>Vinland Saga S2</p>
+            <p class="date">Oct 2022</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="top-img">
+            <img src="\image\6574952.png" alt="">
+          </div>
+          <div class="card-text">
+            <p>Uzumaki</p>
+            <p class="date">2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="top-img">
+            <img src="\image\5017547.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <p>Jujutsu Kaisen S2</p>
+            <p class="date">2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="top-img">
+            <img src="\image\peakpx1.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <p>Dr. Stone: New world</p>
+            <p class="date">Apr 2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="top-img">
+            <img src="\image\976502.jpg" alt="">
+          </div>
+          <div class="card-text">
+            <p>Demon Slayer S3</p>
+            <p class="date">-</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="col">
+      <h4 class="text">Genres</h4> 
+      <div class="card genres">
+        <div class="card-body text-center" id="thirdTable">
+          <table>
+            <tbody>
+            <tr style="color: red;">
+            <td>Action</td>
+            <td>Adventure</td>
+            <td>Cars</td>
+            </tr>
+            <tr style="color: yellow;">
+            <td>Comedy</td>
+            <td>Dementia</td>
+            <td>Demons</td>
+            </tr>
+            </tr>
+            <tr style="color: rgb(2, 2, 69);">
+            <td>Drama</td>
+            <td>Ecchi</td>
+            <td>Fantasy</td>
+            </tr>
+            </tr>
+            <tr style="color: rgb(2, 181, 2);">
+            <td>Game</td>
+            <td>Harem</td>
+            <td>Historical</td>
+            </tr>
+            <tr style="color: rgb(214, 7, 214);">
+            <td>Horror</td>
+            <td>Isekai</td>
+            <td>Josei</td>
+            </tr>
+            <tr style="color: rgb(255, 0, 55);">
+            <td>Kids</td>
+            <td>Magic</td>
+            <td>Martial Arts</td>
+            </tr>
+            <tr style="color: white;">
+            <td>Mecha</td>
+            <td>Military</td>
+            <td>Music</td>
+            </tr>
+            <tr style="color: cyan;">
+            <td>Mystery</td>
+            <td>Parody</td>
+            <td>Police</td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<section class="bottom-container">
+  <footer>
+    <div class="foot">
+      <a href="https://www.reddit.com/r/anime/" target="_blank"><i class="fa-brands fa-reddit fa-2x"></i></a>
+      <a href="https://discord.gg/otaku" target="_blank"><i class="fa-brands fa-discord fa-2x"></i></a>
+      <a href="https://t.me/Anime_x_Clan" target="_blank"></a><i class="fa-brands fa-telegram fa-2x"></i></a>
+      <a href="https://twitter.com/Anime" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a>
+      <h1>© Copyright Abhay Semwal</h1>
+    </div>
+  </footer>
+</section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="\index.js"></script>
+</body>
+</html> 
