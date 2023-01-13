@@ -7,7 +7,7 @@ const session=require("express-session");
 const passport=require("passport");
 const passportLocalMongoose=require("passport-local-mongoose");
 const { deserializeUser } = require('passport');
-const GoogleStrategy=require("passport-google-oauth20").Strategy;
+// const GoogleStrategy=require("passport-google-oauth20").Strategy;
 const findOrCreate=require("mongoose-findorcreate");
 const app = express();
 
@@ -46,18 +46,18 @@ passport.use(Aniuser.createStrategy());
 passport.serializeUser(Aniuser.serializeUser());
 passport.deserializeUser(Aniuser.deserializeUser());
 
-passport.use(new GoogleStrategy({
-    clientID: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-    callbackURL:"http://localhost:3000/auth/google/Anifinity",
-    userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo"
-    },
-    function(accessToken,refreshToken,profile,cb){
-      Aniuser.findOrCreate({googleId: profile.id},function(err,user){
-        return cb(err,user);
-      });
-    }
-  ));
+// passport.use(new GoogleStrategy({
+//     clientID: process.env.CLIENT_ID,
+//     clientSecret: process.env.CLIENT_SECRET,
+//     callbackURL:"http://localhost:3000/auth/google/Anifinity",
+//     userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo"
+//     },
+//     function(accessToken,refreshToken,profile,cb){
+//       Aniuser.findOrCreate({googleId: profile.id},function(err,user){
+//         return cb(err,user);
+//       });
+//     }
+//   ));
 
 app.get("/",function(req,res){
     if(!isLoggedin)
@@ -74,16 +74,16 @@ app.get("/",function(req,res){
         }
     }
 });
-app.get("/auth/google",
-  passport.authenticate("google",{scope: ["profile"]})
-);
+// app.get("/auth/google",
+//   passport.authenticate("google",{scope: ["profile"]})
+// );
 
-app.get("/auth/google/Anifinity",
-  passport.authenticate("google",{failureRedirect: "/login"}),
-  function(req,res){
-    isLoggedin=1;
-    res.redirect("/Anifinity");
-});
+// app.get("/auth/google/Anifinity",
+//   passport.authenticate("google",{failureRedirect: "/login"}),
+//   function(req,res){
+//     isLoggedin=1;
+//     res.redirect("/Anifinity");
+// });
 app.get("/login",function(req,res){
     res.render("login",{title: req.params.title});  
 });
